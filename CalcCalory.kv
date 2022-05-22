@@ -1,33 +1,18 @@
 
 
 <Container>:
-      #anchor_x: 'right'
-      #anchor_y: 'top'
-     #rows: 4
+
+    spinner: spinner_id
 
     Spinner:
+        id: spinner_id
         size_hint: None, None
         size: 100, 44
         pos_hint: {'right': 1, 'top': 1}
-        text: 'Home'
-        values: 'Home', 'Work', 'Other', 'Custom'
+        text: '<select>'
+        values: ('Home', 'Work', 'Other')
+        on_text: root.on_spinner_select(self.text)
 
-    GridLayout:
-        rows: 3
-        padding: 100
-
-        Label:
-            text: 'Some text'
-            font_size: 40
-
-        TextInput:
-            size_hint: 1, .4
-            multiline: False
-            font_size: 40
-
-        Button:
-            text: 'SAVE'
-            font_size: 40
 
 
 
