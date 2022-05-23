@@ -1,17 +1,76 @@
 
 
 <Container>:
+     rows: 13
+     padding: 50
+     spacing: .1
 
-    spinner: spinner_id
+     MDToolbar:
+          title: "MDLabel"
+          halign: 'left'
+          valign: 'top'
 
-    Spinner:
-        id: spinner_id
-        size_hint: None, None
-        size: 100, 44
-        pos_hint: {'right': 1, 'top': 1}
-        text: '<select>'
-        values: ('Home', 'Work', 'Other')
-        on_text: root.on_spinner_select(self.text)
+
+     MDLabel:
+          text: 'Your Age: '
+          font_size: 20
+          halign: 'left'
+          valign: 'top'
+
+     MDTextField:
+          multiline: False
+
+
+     MDLabel:
+          text: 'Your famale: '
+          font_size: 20
+          halign: 'center'
+          valign: 'center'
+
+     MDLabel:
+          text: 'Man'
+          font_size: 20
+          halign: 'center'
+          valign: 'center'
+
+     MDCheckbox:
+          active: True
+          pos_hint: {'center_x': .4, 'center_y': .5}
+
+     MDLabel:
+          text: 'Woman'
+          font_size: 20
+          halign: 'center'
+          valign: 'center'
+
+     MDCheckbox:
+          pos_hint: {'center_x': .6, 'center_y': .5}
+
+     MDLabel:
+          text: 'Your Active: '
+          font_size: 20
+          halign: 'left'
+          valign: 'top'
+
+     MDDropDownItem:
+          id: drop_item
+          pos_hint: {'center_x': .5, 'center_y': .5}
+          text: 'Item'
+          on_release: self.set_item("New Item")
+
+     MDTextButton:
+          text: "MDTEXTBUTTON"
+          halign: 'center'
+          valign: 'center'
+          #custom_color: 0, 1, 0, 1
+
+
+
+
+
+
+
+
 
 
 
